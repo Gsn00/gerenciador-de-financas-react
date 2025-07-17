@@ -1,4 +1,5 @@
 import { CircleUserRound, LogOut } from "lucide-react";
+import { Icon } from "./Icon";
 
 function Header() {
   return (
@@ -6,10 +7,14 @@ function Header() {
       <h1 className="font-bold">Gerenciador de Finanças</h1>
       <div className="flex items-center space-x-8">
         <button className="cursor-pointer">
-          <CircleUserRound />
+          <Icon>
+            <CircleUserRound />
+          </Icon>
         </button>
         <button className="cursor-pointer">
-          <LogOut />
+          <Icon>
+            <LogOut />
+          </Icon>
         </button>
       </div>
     </div>

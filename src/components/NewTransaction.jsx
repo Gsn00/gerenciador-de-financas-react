@@ -2,6 +2,7 @@ import { Plus } from "lucide-react";
 import Input from "./Input";
 import Select from "./Select";
 import { useState } from "react";
+import { Icon } from "./Icon";
 
 function NewTransaction(props) {
   const [title, setTitle] = useState("");
@@ -13,11 +14,13 @@ function NewTransaction(props) {
   return (
     <div className="text-gray-800 flex flex-col space-y-4 bg-white py-4 px-10 rounded-md shadow">
       <div className="flex space-x-2">
-        <Plus />
+        <Icon>
+          <Plus />
+        </Icon>
         <p className="font-bold">Nova Transação</p>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4">
         <Input
           type="text"
           placeholder="Título"

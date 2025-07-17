@@ -4,6 +4,7 @@ import Input from "../components/Input";
 import Select from "../components/Select";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router";
+import { Icon } from "../components/Icon";
 
 function EditTransaction() {
   const location = useLocation();
@@ -27,11 +28,13 @@ function EditTransaction() {
 
         <div className="text-gray-800 flex flex-col space-y-4 bg-white py-4 px-10 rounded-md shadow">
           <div className="flex space-x-2">
-            <Pencil />
+            <Icon>
+              <Pencil />
+            </Icon>
             <p className="font-bold">Editar Transação</p>
           </div>
 
-          <div className="grid grid-cols-3 gap-4">
+          <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4">
             <Input
               type="text"
               placeholder="Título"

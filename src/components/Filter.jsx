@@ -1,16 +1,19 @@
 import { Search } from "lucide-react";
 import Select from "./Select";
 import Input from "./Input";
+import { Icon } from "./Icon";
 
 function Filter(props) {
   return (
     <div className="text-gray-800 flex flex-col space-y-4 bg-white py-4 px-10 rounded-md shadow">
       <div className="flex space-x-2">
-        <Search />
+        <Icon>
+          <Search />
+        </Icon>
         <p className="font-bold">Filtros</p>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4">
         <div>
           <p className="font-bold">Tipo:</p>
           <Select
