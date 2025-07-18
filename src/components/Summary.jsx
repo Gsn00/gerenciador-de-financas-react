@@ -11,17 +11,17 @@ function Summary(props) {
         <p className="font-bold">Resumo</p>
       </div>
 
-      <div className="grid grid-cols-1 text-center sm:text-left sm:grid-cols-2 gap-4">
-        <p className="text-green-600">
+      <div className="flex flex-col sm:grid sm:grid-cols-2 gap-4">
+        <p className="text-green-600 flex gap-2 w-full justify-between sm:justify-start">
           <b>Entradas:</b> R$ {props.inflows}
         </p>
-        <p className="text-red-700">
+        <p className="text-red-700 flex gap-2 w-full justify-between sm:justify-start">
           <b>Saídas:</b> R$ {props.outflows}
         </p>
-        <p>
+        <p className="flex gap-2 w-full justify-between sm:justify-start">
           <b>Saldo:</b> R$ {props.balance}
         </p>
-        <p className="flex gap-2 w-full justify-center sm:justify-start">
+        <p className="flex gap-2 w-full justify-between sm:justify-start">
           <b>Status:</b>
           {props.balance >= 0 ? (
             <span className="flex gap-2">
